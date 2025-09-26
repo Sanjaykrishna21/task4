@@ -1,0 +1,10 @@
+use library;
+select * from author;
+select count(*) from author;
+select * from book;
+select count(title) from book;
+select sum(totalcopies) from book;
+select avg(availablecopies) from book;
+select genre, count(*) as total_books from book group by genre;
+select lastname, count(*) as author_count from author group by lastname;
+select lastname, count(*) as author_count from author group by lastname having COUNT(*) > 1;
